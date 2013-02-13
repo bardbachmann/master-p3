@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "no.uib.prototype3"
+        version   = "0.2.5">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Prototype 3</name>
+
+    <description>
+        News and the Mobile Web - Prototype 3
+    </description>
+
+    <author href="" email="bba084@student.uib.no">
+        Bardbach
+    </author>
+
+    <preference name="phonegap-version" value="2.0.0" />
+
+    <preference name="permissions" value="none"/>
+    <access origin="http://serienytt.no" browserOnly="true" />
+
+</widget>

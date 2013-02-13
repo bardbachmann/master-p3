@@ -1,0 +1,355 @@
+$base-color: #4477CC;
+$base-gradient: 'glossy';
+$form-bg-color: #99CCFF;
+$body-bg-color: #99CCFF;
+$form-field-bg-color:#DDEEFF;
+
+@import 'sencha-touch/default/all';
+
+
+//$include-default-icons: false;
+
+// You may remove any of the following modules that you
+// do not use in order to create a smaller css file.
+  @include sencha-panel;
+  @include sencha-buttons;
+  //@include sencha-sheet;
+  //@include sencha-picker;
+  @include sencha-tabs;
+  @include sencha-toolbar;
+  @include sencha-toolbar-forms;
+  //@include sencha-indexbar;
+  @include sencha-list;
+  @include sencha-layout;
+  @include sencha-carousel;
+  @include sencha-form;
+  @include sencha-msgbox;
+  @include pictos-iconmask(docs1);
+  @include pictos-iconmask('help_black');
+
+// Your custom code goes here...
+
+
+.headerimage {
+  position: relative;
+  margin-bottom: 10px;
+  max-width:600px;
+}
+
+
+.headerimage img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+
+
+.description{
+  position:absolute; /* absolute position (so we can position it where we want)*/
+  bottom:5px; /* position will be on bottom */
+  left:0px;
+  width:100%;
+  /* styling bellow */
+  background-color: rgba(0,0,0,0.8);
+  font-family: ProcionoRegular, Georia, serif;
+  font-size:0.9em;
+  color:white;
+  /*opacity:0.9;  transparency */
+  filter:alpha(opacity=80); /* IE transparency */
+}
+
+.descriptionlarger{
+  position:absolute; /* absolute position (so we can position it where we want)*/
+  bottom:5px; /* position will be on bottom */
+  left:0px;
+  width:100%;
+  /* styling bellow */
+  background-color: rgba(0,0,0,0.8);
+  font-family: ProcionoRegular, Georia, serif;
+  font-size:1.0em;
+  color:white;
+  /*opacity:0.9;  transparency */
+  filter:alpha(opacity=80); /* IE transparency */
+}
+
+@media only screen and (min-device-width: 240px) and (max-device-width: 480px) {
+
+  .description p{
+    font-size: 0.9em;
+    font-family: Tahoma, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    margin:0px;
+  }
+
+  .descriptionlarger p{
+    font-size: 1.05em;
+    font-family: Tahoma, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    margin:0px;
+  }
+
+  .description h1{
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #ffffff;
+    padding-left: 4px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin:0px;
+  }
+
+  .descriptionlarger h1{
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #ffffff;
+    padding-left: 4px;
+      max-width: 480px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin:0px;
+  }
+
+  .article {
+    }
+
+  .articlelarger {
+    max-width: 480px;
+  }
+}
+
+@media only screen and (min-device-width: 481px){
+.description p{
+   font-size: 0.95em;
+  font-family: Tahoma, sans-serif;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 0px;
+   padding-bottom: 5px;
+   margin:0px;
+ }
+
+  .descriptionlarger p{
+    font-size: 1.1em;
+    font-family: Tahoma, sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    margin:0px;
+  }
+
+.description h1{
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #ffffff;
+  padding-left: 9px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin:0px;
+  }
+
+
+  .descriptionlarger h1{
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #ffffff;
+    padding-left: 9px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin:0px;
+  }
+}
+
+.article h1{
+  color: #115599;
+  font-size: 1.125em;
+  font-family: ProcionoRegular, Georia, serif;
+}
+
+.articlelarger h1{
+  color: #115599;
+  font-size: 1.325em;
+  font-family: ProcionoRegular, Georia, serif;
+}
+
+.article h2{
+  color: #115599;
+  font-size: 1em;
+   font-family: ProcionoRegular, Georia, serif;
+  font-weight: bold;
+ }
+
+.articlelarger h2{
+  color: #115599;
+  font-size: 1.2em;
+  font-family: ProcionoRegular, Georia, serif;
+  font-weight: bold;
+}
+
+.article h3{
+  color: #115599;
+  font-size: 1em;
+  font-family: ProcionoRegular, Georia, serif;
+  font-weight: bold;
+}
+
+
+.articlelarger h3{
+  color: #115599;
+  font-size: 1.2em;
+  font-family: ProcionoRegular, Georia, serif;
+  font-weight: bold;
+}
+
+.article p {
+  font-size: 0.8em;
+}
+
+
+.articlelarger p {
+  font-size: 1.0em;
+}
+
+.article img {
+   max-width: 95%;
+   height: auto;
+   width: auto\9; /* ie8 */
+ }
+
+.articlelarger img {
+  max-width: 95%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+
+.articletext {
+  float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+.noback td {
+  background-image: none;
+}
+
+.listcontainer {
+  float: left;
+  font-family: ProcionoRegular, Georia, serif;
+  font-size: 1.1em;
+  width: 100%;
+
+}
+
+.listcontainerlarger {
+  float: left;
+  font-family: ProcionoRegular, Georia, serif;
+  font-size: 1.3em;
+  width: 100%;
+
+}
+
+.listcontainer img {
+  float: right;
+}
+
+.x-list .x-list-item {
+  padding-bottom: 4px;
+}
+
+.x-list .x-list-inner {
+  width: 100%;
+  padding: 0em;
+}
+
+.x-list-normal .x-list-header {
+  color: #224499;
+}
+
+.x-carousel-item .x-list-item-label {
+   border-top: none !important;
+   border-bottom: none !important;
+ }
+
+.x-carousel-item .x-list .x-list-item {
+  padding-bottom: 0px;
+}
+
+.x-carousel-indicator-dark span.x-carousel-indicator-active{
+  background-color: darken(#224499, 20);
+}
+.x-carousel-indicator-dark span{
+  background-color: lighten(#224499,20);
+}
+
+.x-carousel-indicator {
+ background-color: rgba(255, 255, 255, 0.5)
+}
+
+.articlecomments {
+  width: 100%;
+}
+
+.articlecomments h3 {
+  width: 100%;
+  color: #115599;
+  border-bottom: 1px solid #3366FF;
+}
+
+.singlecomment {
+  width: 100%;
+  background: #ffffff;
+  margin-bottom: 5px;
+  border: 1px solid #dddddd;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+
+}
+
+.singlecomment h4 {
+  margin-bottom: 0;
+  color: #115599;
+  padding-left: 5px;
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-family: ProcionoRegular, Georia, serif;
+}
+
+.singlecomment p {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+
+.x-toolbar .x-button .x-button-label, .x-toolbar .x-button .x-hasbadge .x-badge, .x-hasbadge .x-toolbar .x-button .x-badge {
+  font-size: .9em;
+}
+
+
+.x-button  .x-button-icon {
+  width: 2.1em;
+  height: 2.1em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: block;
+}
+
+iframe{
+  width: 100%;
+}
+.zooming2 {
+  background-image: url('../images/zoom.png');
+
+}
+
+

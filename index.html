@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>TestApp</title>
+    <style type="text/css">
+         /**
+         * Example of an initial loading indicator.
+         * It is recommended to keep this as minimal as possible to provide instant feedback
+         * while other resources are still being loaded for the first time
+         */
+        html, body {
+            height: 100%;
+            background-color: #5061be;
+        }
+
+        #appLoadingIndicator {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            -webkit-animation-name: appLoadingIndicator;
+            -webkit-animation-duration: 0.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: linear;
+        }
+
+        #logo {
+            position: absolute;
+            top: 40%;
+            margin-top: -15px;
+            text-align: center;
+            height: auto;
+            width: 100%;
+        }
+
+        #logo h1 {
+            font-size: 2em;
+            font-family: ProcionoRegular, sans-serif;
+            font-weight: bold;
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        #appLoadingIndicator > * {
+            background-color: #FFFFFF;
+            display: inline-block;
+            height: 30px;
+            -webkit-border-radius: 15px;
+            margin: 0 5px;
+            width: 30px;
+            opacity: 0.8;
+        }
+
+        @-webkit-keyframes appLoadingIndicator{
+            0% {
+                opacity: 0.8
+            }
+            50% {
+                opacity: 0
+            }
+            100% {
+                opacity: 0.8
+            }
+        }
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="resources/css/app.css">
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+    <!-- The line below must be kept intact for Sencha Command to build your application -->
+    <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
+
+
+    <script type="text/javascript" charset="utf-8">
+
+        // Call onDeviceReady when PhoneGap is loaded.
+        //
+        // At this point, the document has loaded but phonegap-1.1.0.js has not.
+        // When PhoneGap is loaded and talking with the native device,
+        // it will call the event `deviceready`.
+        //
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+        // PhoneGap is loaded and it is now safe to call PhoneGap methods
+        //
+        function onDeviceReady() {
+            // Register the event listener
+            document.addEventListener("backbutton", onBackKeyDown, false);
+        }
+
+        // Handle the back button
+        //
+        function onBackKeyDown() {
+            carouselArray.splice(0, carouselArray.length);
+            Ext.Viewport.removeAll();
+            var ntpage2 = Ext.getCmp('mainpanel') || new TestApp.view.Main;
+            Ext.Viewport.setActiveItem(ntpage2);
+
+        }
+
+    </script>
+
+</head>
+<body onload="onLoad()">
+    <div id="appLoadingIndicator">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="logo" ><h1>Serienytt.no</h1> </div>
+</body>
+</html>
