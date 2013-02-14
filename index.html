@@ -97,11 +97,49 @@
         // Handle the back button
         //
         function onBackKeyDown() {
-            carouselArray.splice(0, carouselArray.length);
-            Ext.Viewport.removeAll();
-            var ntpage2 = Ext.getCmp('mainpanel') || new TestApp.view.Main;
-            Ext.Viewport.setActiveItem(ntpage2);
+           /* var storage = Ext.getStore('Settings');
+            var localCar = Ext.getCmp('thecarousel').removeAll();
+            carouselArray = [];
+            storage.each(function(record) {
+                if(record.get("toggle") == true){ addCarouselList(record.get('title'), record.get('title'), record.get('src'));
+                }
 
+            });
+
+            Ext.getCmp('TheList').setMasked({
+                xtype: 'loadmask',
+                message: 'Lagrer kategorier'
+            });
+
+            setTimeout(function() {
+
+
+                // Unmask the formpanel
+                Ext.getCmp('TheList').unmask();
+            }, 500);
+
+            Ext.getCmp('TheList');
+
+            if(carouselArray.length == 0){
+                Ext.Msg.alert("Ingen kategori valgt", "Du må velge minst en kategori for at systemet skal fungere.", Ext.emptyFn);
+
+                localCar.add({
+                    xtype: 'panel',
+                    html: 'Ingen kategori valgt'
+                });
+                localCar.setActiveItem(0);
+
+            }
+            else{
+                localCar.add(carouselArray);
+                localCar.setActiveItem(0);
+            }
+
+            carouselArray.splice(0, carouselArray.length);
+                Ext.Viewport.removeAll();
+                var ntpage2 = Ext.getCmp('mainpanel') || new TestApp.view.Main;
+                Ext.Viewport.setActiveItem(ntpage2);
+                             */
         }
 
     </script>
